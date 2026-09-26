@@ -12,6 +12,14 @@ const featured = {
   ear:['ear-pain','earwax','acute-otitis-media','tinnitus','blocked-ear','sudden-hearing-loss'],
   throat:['sore-throat','acute-tonsillitis','pharyngitis','laryngitis','snoring','persistent-hoarseness']
 };
+const bubbleLabels = {
+  'blocked-nose':'Заложен нос', 'acute-sinusitis':'Синусит', 'allergic-rhinitis':'Аллергия',
+  'nasal-polyps':'Полипы носа', nosebleed:'Кровь из носа', 'nasal-fracture':'Травма носа',
+  'ear-pain':'Болит ухо', earwax:'Серная пробка', 'acute-otitis-media':'Средний отит',
+  tinnitus:'Шум или писк', 'blocked-ear':'Заложило ухо', 'sudden-hearing-loss':'Резко упал слух',
+  'sore-throat':'Болит горло', 'acute-tonsillitis':'Ангина', pharyngitis:'Фарингит',
+  laryngitis:'Ларингит', snoring:'Храп', 'persistent-hoarseness':'Осиплость голоса'
+};
 const bySlug = Object.fromEntries(entries.map(entry => [entry.slug, entry]));
 const organOf = entry => atlasRegions[atlasSpecs[entry.slug].region].organ;
 const grouped = organ => entries.filter(entry => organOf(entry) === organ);
@@ -33,7 +41,7 @@ function mapMarkup(depth, compact=false) {
   const organButton = (id, extra='') => `<button class="ent-organ ent-organ--${id}${extra}" type="button" data-map-organ="${id}" aria-label="Показать заболевания: ${h(organInfo[id].title)}"><img src="${pre}assets/organs/${id}.png" alt="" loading="${compact?'lazy':'eager'}"><span>${h(organInfo[id].short)}</span></button>`;
   const bubbles = Object.entries(featured).map(([organ,slugs]) => `<div class="ent-bubbles ent-bubbles--${organ}" data-map-bubbles="${organ}" ${organ==='nose'?'':'hidden'}>${slugs.map((slug,i) => {
     const entry=bySlug[slug], spec=atlasSpecs[slug], region=atlasRegions[spec.region];
-    return `<button class="ent-bubble ent-bubble--${i+1}" type="button" data-map-disease="${slug}" data-organ="${organ}" data-title="${h(entry.title)}" data-region="${h(region.label)}" data-note="${h(spec.note)}" aria-label="Подробнее: ${h(entry.title)}">${h(entry.title)}</button>`;
+    return `<button class="ent-bubble ent-bubble--${i+1}" type="button" data-map-disease="${slug}" data-organ="${organ}" data-title="${h(entry.title)}" data-region="${h(region.label)}" data-note="${h(spec.note)}" aria-label="Подробнее: ${h(entry.title)}">${h(bubbleLabels[slug] || entry.title)}</button>`;
   }).join('')}</div>`).join('');
   return `<div class="ent-map ${compact?'ent-map--compact':''}" data-ent-map data-depth="${depth}" data-current-organ="nose">
     <div class="ent-map-canvas">
