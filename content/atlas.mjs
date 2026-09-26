@@ -1,4 +1,4 @@
-// Educational schematic metadata. These are location guides, not diagnostic images.
+// Educational location metadata. Markers show an approximate projection, not a diagnosis.
 const rows = `
 acute-sinusitis|sinuses|inflammation|Пазухи и полость носа могут воспаляться одновременно.
 chronic-sinusitis|sinuses|inflammation|Длительное воспаление требует уточнения причины и оценки слизистой.
@@ -29,9 +29,9 @@ mastoiditis|mastoid|inflammation|Сосцевидный отросток рас�
 cholesteatoma|middle-ear|growth|Образование может находиться в полости среднего уха.
 sudden-hearing-loss|cochlea|signal|Внезапное снижение слуха нельзя считать обычной пробкой без осмотра.
 gradual-hearing-loss|cochlea|signal|Причины постепенного снижения слуха могут быть в разных отделах слуховой системы.
-tinnitus|cochlea|signal|Шум в ухе — симптом; схема не показывает его единственную причину.
+tinnitus|cochlea|signal|Шум в ухе — симптом; по внешнему виду уха его причину определить нельзя.
 bppv|vestibular|motion|При ДППГ нарушается движение частиц во внутреннем ухе.
-meniere|vestibular|fluid|Схема показывает внутреннее ухо, связанное со слухом и равновесием.
+meniere|vestibular|fluid|Внутреннее ухо связано со слухом и равновесием, но снаружи изменения не видны.
 labyrinthitis|vestibular|inflammation|Лабиринт внутреннего уха участвует в равновесии и слухе.
 otosclerosis|ossicles|growth|Изменения косточек среднего уха могут мешать передаче звука.
 ear-barotrauma|eardrum|pressure|Разница давления может воздействовать на перепонку и среднее ухо.
@@ -51,7 +51,7 @@ throat-foreign-body|pharynx|foreign|Ощущение инородного тел
 salivary-gland-inflammation|salivary|inflammation|Слюнная железа находится вне просвета глотки.
 neck-lump|neck-node|growth|Уплотнение на шее может иметь разные причины и требует осмотра.
 persistent-hoarseness|vocal-folds|signal|Стойкое изменение голоса требует осмотра голосовых складок.
-laryngeal-cancer-signs|larynx|signal|Стойкие симптомы требуют исключения серьезных причин; схема не показывает опухоль.
+laryngeal-cancer-signs|larynx|signal|Стойкие симптомы требуют исключения серьезных причин; изображение не показывает опухоль.
 sore-throat|pharynx|field|Боль в горле может исходить из нескольких соседних областей.
 blocked-nose|nasal-cavity|field|Заложенность бывает при разных причинах в полости носа.
 ear-pain|middle-ear|field|Боль в ухе бывает связана с наружным, средним ухом и соседними областями.

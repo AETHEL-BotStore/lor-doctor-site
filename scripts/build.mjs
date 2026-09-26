@@ -3,7 +3,6 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {entries, groups, sources} from '../content/entries.mjs';
 import {atlasRegions, atlasSpecs} from '../content/atlas.mjs';
-import {visualFor} from './atlas-svg.mjs';
 import {homeAtlas, homeAllLinks, articleVisual, atlasPage} from './atlas-layout.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -105,7 +104,6 @@ write('topics/index.html',topics());
 write('atlas/index.html',atlasPage({head,header,footer,appointment,siteName}));
 for (const e of entries) {
   write(`topics/${e.slug}/index.html`,page(e));
-  write(`assets/atlas/${e.slug}.svg`,visualFor(e).svg);
 }
 write('robots.txt',`User-agent: *\nAllow: /\n${publishReady?`Sitemap: ${url('sitemap.xml')}\n`:''}`);
 if (publishReady) {
