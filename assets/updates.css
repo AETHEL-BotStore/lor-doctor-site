@@ -1,0 +1,100 @@
+/* Contact, review, and map updates. Map labels occupy reserved rails, never organ hit areas. */
+.header-inner{gap:24px}.desktop-nav{gap:21px}.brand-mark{flex:none}
+.booking-card--active{color:#fff;transition:background .2s,border-color .2s,transform .2s}
+.booking-card--active:hover{background:rgba(255,255,255,.09);border-color:#9bd5d0;transform:translateY(-2px)}
+.booking-action{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;color:#b6e9e1;font-size:13px;font-weight:750}
+.doctor-education{padding:30px 0 0;margin-top:40px;border-top:1px solid var(--line);max-width:800px}
+.doctor-education>p:not(.section-kicker){font-size:15px;color:var(--ink-2);line-height:1.7}
+.compact-reviews{display:inline-block;margin-left:22px}
+.reviews-section{padding-top:76px;padding-bottom:76px}
+.reviews-overview{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:25px 29px;background:#e7f3f0;border:1px solid #d0e4df;border-radius:12px;margin-bottom:17px}
+.reviews-overview>div{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.review-platform{font-size:18px;font-weight:800;letter-spacing:-.04em}
+.reviews-overview strong{font-size:37px;line-height:1;font-weight:650;letter-spacing:-.05em}
+.reviews-overview strong small{font-size:16px;letter-spacing:0;color:var(--muted);font-weight:500}
+.reviews-overview>div>span:last-child{color:var(--ink-2);font-size:13px}
+.review-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.review-card{display:flex;flex-direction:column;min-width:0;padding:25px 24px;background:#fff;border:1px solid var(--line);border-radius:11px}
+.review-card-top,.review-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:11px;color:var(--muted)}
+.review-card-top>span{font-weight:750;color:var(--ink-2)}
+.review-card blockquote{margin:29px 0 30px;font:italic 25px/1.38 var(--serif);letter-spacing:-.025em}
+.review-card-bottom{margin-top:auto;border-top:1px solid var(--line);padding-top:17px;flex-wrap:wrap}
+.review-card-bottom>span>span{color:#21857b;font-size:15px}
+.review-card-bottom a{color:var(--teal);font-weight:750}
+.review-card-bottom a:hover,.reviews-source-note a:hover{text-decoration:underline;text-underline-offset:4px}
+.reviews-source-note{margin:18px 0 0;max-width:800px;font-size:12px;color:var(--muted);line-height:1.6}
+.reviews-source-note a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+
+.ent-map{border-radius:19px}
+.ent-map .ent-map-toolbar{border-top:0;border-bottom:1px solid #dbe9e3;padding:18px 25px}
+.ent-map .ent-map-canvas{height:auto;min-height:0;aspect-ratio:auto;padding:20px 0 40px}
+.ent-map .ent-map-canvas:before{content:none}
+.ent-map .ent-map-anatomy{position:relative;width:56%;height:490px;margin:0 auto;overflow:hidden}
+.ent-map .ent-map-halo{width:85%;top:50%;box-shadow:0 0 0 45px rgba(83,151,151,.025)}
+.ent-map .ent-map-connections{display:block}
+.ent-map .ent-organ{transform:none!important;transition:filter .2s;opacity:1!important;filter:drop-shadow(0 12px 17px rgba(69,100,103,.12))}
+.ent-map .ent-organ:hover{filter:drop-shadow(0 14px 19px rgba(38,114,113,.24))}
+.ent-map .ent-organ--nose{left:34%;top:5%;width:32%;height:38%}
+.ent-map .ent-organ--left{left:1%;top:24%;width:30%;height:38%}
+.ent-map .ent-organ--right{left:69%;top:24%;width:30%;height:38%}
+.ent-map .ent-organ--throat{left:34%;top:55%;width:32%;height:39%}
+.ent-map .ent-organ span{bottom:0;font-size:10px;padding:5px 11px;letter-spacing:.06em}
+.ent-map .ent-organ[aria-pressed=true] span{color:#fff;border-color:var(--teal);background:var(--teal)}
+.ent-map .ent-bubbles{position:absolute;inset:24px 20px 53px;display:grid;grid-template-columns:minmax(110px,1fr) minmax(0,2.5fr) minmax(110px,1fr);grid-template-rows:repeat(3,minmax(0,1fr));column-gap:16px;row-gap:18px;pointer-events:none}
+.ent-map .ent-bubbles[hidden]{display:none!important}
+.ent-map .ent-bubble{position:relative;left:auto;right:auto;top:auto;bottom:auto;align-self:center;justify-self:center;width:110px;height:110px;min-height:110px;padding:15px 10px;font-size:12px;line-height:1.3;pointer-events:auto;animation:none;scale:1;transform:none;backdrop-filter:none;transition:background .15s,border-color .15s,box-shadow .15s}
+.ent-map .ent-bubble:hover,.ent-map .ent-bubble:focus-visible,.ent-map .ent-bubble[data-active=true]{transform:none;scale:1;background:#e4f5f0;border-color:#1c8588;box-shadow:0 9px 25px rgba(28,87,91,.16)}
+.ent-map .ent-bubble--1{grid-column:1;grid-row:1}.ent-map .ent-bubble--2{grid-column:1;grid-row:2}.ent-map .ent-bubble--3{grid-column:1;grid-row:3}
+.ent-map .ent-bubble--4{grid-column:3;grid-row:1}.ent-map .ent-bubble--5{grid-column:3;grid-row:2}.ent-map .ent-bubble--6{grid-column:3;grid-row:3}
+.ent-map .ent-bubble:after{content:'';position:absolute;left:100%;top:50%;width:25px;height:1px;background:#a0c4bd;pointer-events:none}
+.ent-map .ent-bubble:nth-child(n+4):after{left:auto;right:100%}
+.ent-map .ent-map-instruction{left:20px;right:20px;bottom:12px;text-align:center;font-size:11px;line-height:1.4;margin:0}
+.ent-map .ent-map-detail{min-height:150px;align-items:center;padding:21px 25px}
+.ent-map .ent-map-detail h3{font-size:21px;line-height:1.25}
+.ent-map .ent-map-detail p{max-width:660px;line-height:1.5}
+.ent-map .ent-map-detail-actions{flex-direction:column;align-items:flex-start;gap:12px;min-width:140px}
+.ent-map .ent-map-detail-actions a{font-size:12px}
+.ent-map .ent-map-toolbar button{min-height:43px}
+.atlas-disease-row{min-height:46px}.atlas-hero-copy,.atlas-explorer-figure,.article-heading>div,.article-aside{min-width:0}
+.atlas-organ-tab{min-height:44px}
+.atlas-map-heading h2{line-height:1.15}
+
+@media(max-width:1050px){
+ .desktop-nav{display:none}.header-inner{justify-content:space-between}
+ .menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:6px;width:40px;height:40px;border:1px solid var(--line);border-radius:6px;background:#fff;margin-left:auto;flex:none}
+ .menu-toggle span{height:2px;background:var(--ink);width:19px;margin:0 auto}
+ .mobile-nav:not([hidden]){display:grid;padding:8px 32px 20px;background:var(--paper);border-top:1px solid var(--line)}
+ .mobile-nav a{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+ .reviews-overview{flex-wrap:wrap}.review-grid{gap:11px}.review-card{padding:22px 18px}.review-card blockquote{font-size:23px}
+ .ent-map .ent-map-anatomy{height:460px}
+}
+@media(max-width:760px){
+ .review-grid{grid-template-columns:1fr}.review-card blockquote{margin:20px 0}.review-card{padding:23px}
+ .reviews-overview{padding:22px}.reviews-overview>div{gap:17px}
+ .ent-map .ent-map-canvas{padding:12px 17px 18px}
+ .ent-map .ent-map-anatomy{width:min(100%,490px);height:350px;margin:0 auto 24px}
+ .ent-map .ent-bubbles{position:static;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto;gap:10px;pointer-events:auto}
+ .ent-map .ent-bubbles .ent-bubble{grid-column:auto;grid-row:auto;width:100%;height:auto;min-height:80px;padding:17px 10px 12px;font-size:12px;border-radius:16px;box-shadow:0 4px 13px rgba(28,87,91,.07)}
+ .ent-map .ent-bubble:after{display:none}
+ .ent-map .ent-map-instruction{position:static;margin-top:18px;font-size:11px}
+ .ent-map .ent-map-toolbar{display:block;padding:17px}.ent-map .ent-map-toolbar>span{display:block;margin-bottom:10px}.ent-map .ent-map-toolbar>div{justify-content:flex-start;gap:7px}
+ .ent-map .ent-map-toolbar button{font-size:12px;padding:8px 12px;min-height:44px}
+ .ent-map .ent-map-detail{display:block;min-height:0;padding:21px 20px}
+ .ent-map .ent-map-detail-actions{flex-direction:row;flex-wrap:wrap;gap:20px;margin-top:15px}
+}
+@media(max-width:600px){
+ .header-inner{gap:12px}.mobile-nav:not([hidden]){padding-left:20px;padding-right:20px}
+ .reviews-section{padding-top:59px;padding-bottom:59px}.reviews-overview>div{gap:14px}.reviews-overview>div>span:last-child{flex-basis:100%}
+ .reviews-overview .button{font-size:12px;gap:12px;padding:13px 15px;width:100%}
+ .review-card blockquote{font-size:25px}.doctor-education{margin-top:29px}.doctor-education>p:not(.section-kicker){font-size:14px}
+ .compact-reviews{display:block;margin:13px 0 0}.booking-action{font-size:13px}
+}
+@media(max-width:480px){
+ .ent-map .ent-bubbles{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .ent-map .ent-map-anatomy{height:300px;margin-bottom:16px}
+ .ent-map .ent-organ span{font-size:9px;padding:5px 8px}
+ .ent-map .ent-map-toolbar button{padding:8px 10px;font-size:11px}
+ .ent-map .ent-map-detail h3{font-size:20px}.ent-map .ent-map-detail p{font-size:12px}
+ .compact-profile{grid-template-columns:75px minmax(0,1fr);gap:14px}.compact-profile img{width:75px;height:110px}.compact-profile h2{font-size:22px;overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce){.booking-card--active,.ent-map .ent-organ,.ent-map .ent-bubble{transition:none}}
