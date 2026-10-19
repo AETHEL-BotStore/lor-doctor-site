@@ -1,4 +1,15 @@
 /* Contact, review, and map updates. Map labels occupy reserved rails, never organ hit areas. */
+.site-header{top:-44px}
+.developer-credit-bar{height:44px;border-bottom:1px solid #dce8e5;background:#edf4f1}
+.developer-credit-bar>.wrap{height:100%;display:flex;align-items:center;justify-content:flex-end}
+.developer-credit-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:32px;padding:6px 11px;border:1px solid #c9ddd6;border-radius:7px;background:#f8fbf9;color:#4a656b;font-size:12px;line-height:1.3;white-space:nowrap;transition:color .15s,background .15s,border-color .15s}
+.developer-credit-link strong{font-weight:650;color:var(--ink)}
+.developer-credit-link .ui-icon{width:14px;height:14px}
+.developer-credit-link:hover{background:#dff0e9;border-color:#83b6a7;color:#155f61}
+.developer-credit-link:hover strong{color:#155f61}
+.developer-credit-link:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+@media(max-width:600px){.developer-credit-link{font-size:11px;gap:7px;padding:6px 9px}.developer-credit-bar>.wrap{justify-content:center}}
+@media(prefers-reduced-motion:reduce){.developer-credit-link{transition:none}}
 .header-inner{gap:24px}.desktop-nav{gap:21px}.brand-mark{flex:none}
 .brand .brand-mark{display:block;border:0;border-radius:10px;object-fit:contain;background:transparent}
 .ui-icon{display:inline-block;flex-shrink:0;width:18px;height:18px;vertical-align:-.18em;pointer-events:none}
